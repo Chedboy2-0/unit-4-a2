@@ -1,0 +1,84 @@
+import random
+//designate variables and arrays
+bool loop = True
+str array Team_Name = ['','','','','','','','','','','','','','','',]
+int array Team_Score = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+int array Num_Of_Events = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+int array points = [5, 3, 1]
+str array positions = ['first', 'second', 'third']
+int TeamSpaces = 5
+int SinglePlayerSpaces = 10
+int TotalSpaces = 0
+str array events = ['event 1', 'event 2', 'event 3', 'event 4', 'event 5', 'event 6']
+str array EventType = ['Academic Event','Sport Event']
+str TeamPosition
+
+while loop = True:
+    console.WriteLine("Welcome to the Scoring system")
+    console.WriteLine("Would you like to use the system? (y/n)")
+    str confirm = ConvertToLower(Console.Readline())
+    if confirm == 'y':
+        ScoreSystemProccess()
+        console.WriteLine("\n Would you like to use the system again? (y/n)")
+        str confirm = ConvertToLower(Console.Readline())
+        if confirm != y:
+            loop = False
+    elif confirm == 'n':
+        console.WriteLine("System Closing. \n Thank you")
+        loop = false
+    else: 
+        Console.writeline("invalid input")
+
+async def ScoreSystemProccess():
+    while TotalSpaces < 16:
+        Console.WriteLine($"Is team {TotalSpaces+1} single player? y/n")
+        str SinglePlayerConfirm = ConvertToLower(Console.Readline)
+        if SinglePlayerConfirm == 'y':
+            if SinglePlayerSpaces > 0:
+                Console.WriteLine("Please enter the team name: \n")
+                Team_Name[TotalSpaces] = Console.Readline()
+                Console.Writeline($"The team {Team_Name[TotalSpaces]} has been saved")
+                SinglePlayerSpaces = SinglePlayerSpaces-1
+                TotalSpaces=TotalSpaces+1
+            else:
+                Console.WriteLine("Unfortunately there is no more single player team spaces remaining")
+        elif SinglePlayerConfirm == 'n':
+            if TeamSpaces > 0:
+                Console.WriteLine("Please enter the team name: \n")
+                Team_Name[TotalSpaces] = Console.Readline()
+                Console.Writeline($"The team {Team_Name[TotalSpaces]} has been saved")
+                TeamSpaces = TeamSpaces-1
+                TotalSpaces=TotalSpaces+1
+            else:
+                Console.WriteLine("Unfortunately there is no more multiplayer team spaces remaining")
+        else: 
+            Console.writeline("invalid input")
+        Console.WriteLine("Is team {TotalSpaces+1} entering into only one event? y/n")
+        str OnlyOneEvent = ConvertToLower(Console.WriteLine())
+        if OnlyOneEvent == 'y':
+            Num_Of_Events[TotalSpaces] = 1
+        else:
+            Num_Of_Events[TotalSpaces] = 6
+    for i in range 6:
+        Console.WriteLine($"Event {i} is a {random.Choice[EventType[]]}")
+        for x in range Team_Name[]:
+            if Num_Of_Events[x] == 1 and i > 1:
+                Console.WriteLine($"{Team_Name[x] is only entered for one event}")
+            else:
+                Console.Writeline("Please enter {Team_Name[x]} position in the tournament: \n")
+                TeamPosition = ConvertToLower(Console.Readline())
+                for y in range positions[]:
+                    if TeamPosition=positions[y]:
+                        Team_Score[x] = (Team_Score[x]+points[y])
+                    else:
+                        Team_Score[x] = (Team_Score[x]+0)
+    for x in range Team_Name:
+        Console.WriteLine($"Team {Team_Name[x]} has {Team_Score[x]} points. \n")
+    
+
+
+        
+
+
+
+    

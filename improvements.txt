@@ -1,0 +1,5 @@
+better comments
+split method into multiple, more easily called methods
+better made array system
+created a method to output the teams and their score
+allowed them to 
